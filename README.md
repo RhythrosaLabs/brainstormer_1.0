@@ -1,79 +1,70 @@
-## brAInstormer
+<div align="center">
 
-brAInstormer is a robust and multifaceted creative suite that leverages the 
-power of GPT, Stable Diffusion, Dalle2, and other forms of AI in order to provide 
-a diverse set of functionalities from a single screen. 
+# 🎨 brAInstormer 1.0
 
-The core script features a simple but powerful GUI that enables 
-capabilities such as text-to-image generation, text-to-animation generation, 
-experimental file conversions, a notepad, ChatGPT, and much more, with everything fitting on one screen.
+**The original all-in-one AI creative suite — everything on one screen, no tab-switching**
 
-It is also packed with various randomization features powered by GPT, making 
-it a one-stop tool to inspire your creativity and streamline concept design.
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=flat&logo=openai&logoColor=white)
+![Stable Diffusion](https://img.shields.io/badge/Stable_Diffusion-FF6B35?style=flat)
+![License](https://img.shields.io/badge/License-MIT-green?style=flat)
 
-## Main Features
-* Dalle-2 AND Stable Diffusion text-to-image generation.
-* Edit, filter, and add font to images with 30+ visual effects that include pixelate, solarize, vignette, greyscale, sepia, mirror, flip, VHS glitch, and many more. 
-* Upscale Images: Enhance the quality of any imported image and enlarge it to 2048x2048.
-* Image-to-Image generation: Import any image then transform it using text prompts to guide the generation process.
-* Image variations: Create endless versions of your generations with the click of a button.
-* Text-to-Animation: Generate animations using text prompts, fully equipped with camera and frame controls, 10+ style presets, randomization tools powered by GPT, and more.
-* Image-to-Animation: Import any image and use it as a starting prompt to shape 48-frame animations.
-* ChatGPT-4: Host up to 3 simultaneous conversations with ChatGPT. Name and assign them different roles and bounce between each chat seamlessly. All conversations can be quickly saved, cleared and imported at any point. 
-* Experimental file conversion: Convert images to audio, MIDI, and more.
-* Notepad: A convenient tool for note-taking, copy-pasting, or anything else you might need it for. The notebook is also fully equipped with 10+ GPT-powered concept shufflers that can randomly provide movie scene suggestions, art styles, trinket lists, and more.
-* Sketchpad: A simple sketchpad for concept doodles with full color spectrum control. Sketches can be saved and cleared at any point. 
-* Multiple GPT-powered randomization algorithms to eliminate your creative block.
-* All of the above on a single screen means no more tab jumping or app switching. In fact, you don't even need to scroll. 
-# Screenshots 
-![Software Screenshot 1](/screenshot1.jpeg)
+</div>
 
-![Software Screenshot 2](/screenshot2.jpeg)
+---
 
-## Set Up
+brAInstormer 1.0 is a desktop creative suite that packs image generation, animation, image editing, ChatGPT, a sketchpad, a notepad, and experimental file conversions into a single Tkinter window. No scrolling, no switching apps — everything in one place.
 
-1. Obtain Stability AI and OpenAI API keys. Register on their websites, check their pricing details, and get your own personal API keys:
-    - https://platform.openai.com
-    - https://dreamstudio.ai/generate
+## ✨ Features
 
-2. Install Python 3: https://www.python.org/downloads/
+- **Text-to-Image** — DALL-E 2 AND Stable Diffusion generation, side by side
+- **Image Editing** — 30+ visual effects: pixelate, solarize, VHS glitch, sepia, mirror, vignette, and more
+- **Image Upscaling** — enlarge any image to 2048×2048
+- **Image-to-Image** — use any image as a starting point for text-guided generation
+- **Image Variations** — generate endless versions of any output
+- **Text-to-Animation** — generate 48-frame animations with camera controls, 10+ style presets, GPT-powered randomization
+- **Image-to-Animation** — import any image and animate it
+- **ChatGPT** — host up to 3 simultaneous GPT-4 conversations, each with a custom role
+- **Experimental Conversions** — convert images to audio, MIDI, and more
+- **Sketchpad** — quick concept doodles with full color spectrum control
+- **Notepad** — with 10+ GPT-powered concept shufflers (movie scenes, art styles, trinket lists…)
 
-3. Download `brAInstormer.py`, `words.py`, and `video.mp4` from this repository
+## 🚀 Quick Start
 
-4. Create a single folder and put all the downloaded files in it. All generations will be saved in this folder.
+```bash
+git clone https://github.com/RhythrosaLabs/brainstormer_1.0.git
+cd brainstormer_1.0
+pip install openai stability-sdk pillow tkinter
+python brainstormer.py
+```
 
-5. Install necessary 3rd party modules:
-   ```sh
-   pip3 install opencv-python
-   pip3 install stability-sdk
-   pip3 install "stability-sdk[anim]"
-   pip3 install tqdm
-   pip3 install openai
-   pip3 install pydub
-   pip3 install midiutil
-   ```
+Get API keys from [platform.openai.com](https://platform.openai.com) and [dreamstudio.ai](https://dreamstudio.ai), then enter them on first launch.
 
-6. Download and install ffmpeg: https://ffmpeg.org
+## 🛠️ Tech Stack
 
-7. Open `brainstormer.py` with your Python script editor. Replace 'YOUR API KEY GOES HERE' with your personal API keys in the appropriate places of the script.
+- **Python + Tkinter** — single-window desktop GUI
+- **OpenAI API** — GPT-4, DALL-E 2
+- **Stability AI** — Stable Diffusion image and animation generation
+- **Pillow** — image processing and effects
 
-8. Run the module and enjoy brainstorming!
+## 📸 Screenshots
 
-## Important
-- ***All generations auto-save as the name of the initial prompt in the root folder.***
-- I'm brand new to coding. I began self-teaching 6 months ago with the help of ChatGPT in order to build this. So this whole script is the work of a freshman. For this reason, all feedback is absolutely welcomed and encouraged. Just please be kind :) I'd like to make this as awesome as possible.
-- This has been tested on four computers. It seems to work correctly with the latest Mac OS. It has been tested on Linux, but the display is a bit wonky. It has not yet been tested elsewhere.
-- I encourage you to explore the script, customize it, and make it your own!
-- For Stable Diffusion's Text-to-Image, you must assign a step amount before clicking on 'generate image'.
-- For generating animation, fill out all prompts and select a preset. The starting prompt must be at Frame 0.
-- Animations take time. To expedite the process, reduce the seed and the total frame count (length).
-- Image-to-Animation generates only 48 frames and is rather wonky.
+![Screenshot 1](screenshot1.jpeg)
+![Screenshot 2](screenshot2.jpeg)
 
-## Support
-If you found brAInstormer helpful and would like to support its development, consider buying me a coffee:
+## 🤝 Contributing
 
-[![Support via PayPal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.me/noodlebake)
+PRs welcome. Open an issue first for major changes.
 
+## 📄 License
 
-## License
-This project is licensed under the MIT License 
+MIT
+
+## 💛 Support
+
+If brAInstormer sparked something creative, consider supporting development:
+
+👉 [Donate via PayPal](https://paypal.me/noodlebake) — @noodlebake
+
+---
+<div align="center">Made with ❤️ by <a href="https://github.com/RhythrosaLabs">RhythrosaLabs</a></div>
